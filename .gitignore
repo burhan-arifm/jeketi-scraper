@@ -1,0 +1,5 @@
+# workspace settings
+.vscode
+
+# generated file
+*.json

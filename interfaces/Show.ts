@@ -4,4 +4,6 @@ export default interface Show {
     title: string;
     datetime: Date;
     performers: PerformingTeam;
+    isBirthdayShow: boolean;
+    birthdayMembers: string[];
 }

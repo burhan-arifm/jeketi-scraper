@@ -18,13 +18,14 @@ export async function TeamParser(originUrl: string, teamFrame: Element) {
         .then((page) => page?.getElementById("bioHolder"))
         .then((container) => {
           const bioWrapper = container?.querySelector(".bioWrap");
+          const nickname = bioWrapper?.querySelector(
+            ".bio span[itemprop='nickname']"
+          )?.innerHTML as string;
 
           return {
             name: bioWrapper?.querySelector(".bio span[itemprop='name']")
               ?.innerHTML as string,
-            nickname: bioWrapper?.querySelector(
-              ".bio span[itemprop='nickname']"
-            )?.innerHTML as string,
+            nickname,
             dob: format(
               parse(
                 bioWrapper
@@ -54,6 +55,7 @@ export async function TeamParser(originUrl: string, teamFrame: Element) {
               tiktok: container
                 ?.querySelector("#tiktokprofile a")
                 ?.getAttribute("href") as string,
+              showroom: `https://www.showroom-live.com/JKT48_${nickname}`,
             },
           };
         })

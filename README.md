@@ -2,7 +2,7 @@
 
 Aplikasi [jkt48.com](https://jkt48.com) web scraper yang berjalan pada runtime Deno. ditulis dengan menggunakan bahasa Typescript.
 
-Sejauh ini, baru dua laman yang telah dibuat _scraper_ nya:
+Sejauh ini, terdapat tiga fitur yang telah dibuat _web scraper_ nya:
 
 -   [Member](https://jkt48.com/member/list)
 -   [Daftar Show Theater](https://jkt48.com/theater/schedule)
